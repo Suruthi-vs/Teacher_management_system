@@ -1,0 +1,20 @@
+<div class="container">
+  <form id="empform" action="{{ action }}" method="{{ method }}">
+    <label for="fname">First Name:</label>
+    <input id="fname" type="text" name="Firstname" value="{{teacher.Firstname}}"  placeholder="Enter first name" required />
+    <br />
+    <label for="lname">Last Name:</label>
+    <input id="lname" type="text" name="Lastname" value="{{teacher.Lastname}}"  placeholder="Enter last name" required />
+    <br />
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="Age" value="{{teacher.Age}}"  placeholder="Enter your age" required />
+    <br />
+    <label>Gender: </label>
+    <input id="male" type="radio" name="Gender" value="male" required />
+    <label for="male">male</label>
+    <input id="female" type="radio" name="Gender" value="female" required />
+    <label for="female">female</label>
+    <br />
+    <input type="submit" value={{#if (ifEquality mode "add")}}Add {{else}} Edit {{/if}}Teacher class="btn btn-primary" />
+  </form>
+</div>

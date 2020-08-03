@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h1 class="display-4">Home</h1>
+  <p class="lead">
+    Teacher Management System
+  </p>
+  <hr class="my-4" />
+  <p class="lead">
+    
+    {{#if isadminlogged}}
+    <a class="btn btn-primary btn-lg" href="/teachers" role="button">Teachers</a>
+    {{else}}
+    <a class="btn btn-primary btn-lg" href="/admin" role="button">Login</a>
+    {{/if}}
+  </p>
+  {{#if isadminlogged}}
+  <a href="/admin/logout">Logout</a>
+  {{/if}}
+</div>
